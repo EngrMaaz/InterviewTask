@@ -18,38 +18,6 @@
             endingLineNumber = "72"
             landmarkName = "getStatesAndCities()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A04D5E30-2DF5-4D0A-8E8E-1D73E80B60F3 - e7100cdfef99c5b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; () in InterviewTask.ViewController.(getStatesAndCities in _BDFE4D6E3B9891DB8443D7EA25020F71)() -&gt; ()"
-                  moduleName = "InterviewTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/happy/Desktop/InterviewTask/InterviewTask/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "224">
-               </Location>
-               <Location
-                  uuid = "A04D5E30-2DF5-4D0A-8E8E-1D73E80B60F3 - 44c5469554172b1a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; () in InterviewTask.ViewController.(getStatesAndCities in _BDFE4D6E3B9891DB8443D7EA25020F71)() -&gt; ()"
-                  moduleName = "InterviewTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/happy/Desktop/InterviewTask/InterviewTask/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,6 +65,38 @@
             startingLineNumber = "75"
             endingLineNumber = "75"
             landmarkName = "getStatesAndCities()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82D75885-E162-461E-AF0E-3AAF6EDE969C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewTask/Utilities/CoreData/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "insertValue(entityName:params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F723081B-F486-414E-97AC-CD1B80EE47D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewTask/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "saveDataInCoreData(locations:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

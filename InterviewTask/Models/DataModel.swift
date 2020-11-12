@@ -34,3 +34,6 @@ struct DataModel: Codable {
         return model
     }
 }
+
+
+

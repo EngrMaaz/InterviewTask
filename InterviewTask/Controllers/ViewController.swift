@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: BaseViewController {
     
@@ -17,7 +18,11 @@ class ViewController: BaseViewController {
         
         self.title = "Home"
         self.configureTableView()
-        self.getStatesAndCities()
+        if let locationsArray =         CoreDataManager.sharedManager.fetchAllValues(entity: "Location"), locationsArray.count > 0 {
+            self.configureDataSource(locations: locationsArray)
+        } else {
+            self.getStatesAndCities()
+        }
     }
 }
 
@@ -74,15 +79,42 @@ extension ViewController {
             }
             guard let response = response else { return }
             
-            if let dataSource = DataModel.toModels(response) {
-                self.dataSource = dataSource
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+            if let dataSource = DataModel.toModels(response), dataSource.count > 0 {
+                self.saveDataInCoreData(locations: dataSource)
+                
             } else {
                 self.showAlert(message: "Someting went wrong")
             }
             
+        }
+    }
+}
+
+extension ViewController {
+    private func saveDataInCoreData(locations: [DataModel]) {
+        CoreDataManager.sharedManager.saveStatesAndCities(entityName: "Location", locations: locations) { (result) in
+            switch result {
+            case .success:
+                
+                guard let locationsArray =         CoreDataManager.sharedManager.fetchAllValues(entity: "Location") else {
+                    self.showAlert(message: "Something went wrong while fetching result")
+                    return
+                }
+                self.configureDataSource(locations: locationsArray)
+            case .failure:
+                print("Couldn't save data")
+                DispatchQueue.main.async {
+                    self.showAlert(message: "Data not saved")
+                }
+            }
+        }
+    }
+    private func configureDataSource(locations: [NSManagedObject]) {
+        for location in locations {
+            self.dataSource.append(DataBaseHelper.shared.toLocation(contractData: location))
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 }

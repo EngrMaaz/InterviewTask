@@ -26,6 +26,11 @@
 		3DDD4443255D25D20052BFD7 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD4442255D25D20052BFD7 /* UITableViewCell+Extension.swift */; };
 		3DDD444B255D2C0A0052BFD7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD444A255D2C0A0052BFD7 /* UIView+Extension.swift */; };
 		3DDD4451255D31A30052BFD7 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD444F255D31A30052BFD7 /* DataBase.xcdatamodeld */; };
+		3DDD44B4255D427F0052BFD7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD44B3255D427F0052BFD7 /* CoreDataManager.swift */; };
+		3DDD44C3255D44580052BFD7 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDD44C2255D44580052BFD7 /* DataBaseHelper.swift */; };
+		3DF359C9255D54E900C6DFFD /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF359C7255D54E900C6DFFD /* Location+CoreDataClass.swift */; };
+		3DF359CA255D54E900C6DFFD /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF359C8255D54E900C6DFFD /* Location+CoreDataProperties.swift */; };
+		3DF35A0E255D55C400C6DFFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF35A0D255D55C400C6DFFD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		3DDD4442255D25D20052BFD7 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		3DDD444A255D2C0A0052BFD7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		3DDD4450255D31A30052BFD7 /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
+		3DDD44B3255D427F0052BFD7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3DDD44C2255D44580052BFD7 /* DataBaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		3DF359C7255D54E900C6DFFD /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3DF359C8255D54E900C6DFFD /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3DF35A0D255D55C400C6DFFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF35A0E255D55C400C6DFFD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +116,7 @@
 				3DDD43FB255D153F0052BFD7 /* InterviewTaskTests */,
 				3DDD4406255D153F0052BFD7 /* InterviewTaskUITests */,
 				3DDD43E3255D153D0052BFD7 /* Products */,
+				3DF35A0C255D55C400C6DFFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				3DDD444F255D31A30052BFD7 /* DataBase.xcdatamodeld */,
+				3DDD44B3255D427F0052BFD7 /* CoreDataManager.swift */,
+				3DDD44C2255D44580052BFD7 /* DataBaseHelper.swift */,
+				3DF359C7255D54E900C6DFFD /* Location+CoreDataClass.swift */,
+				3DF359C8255D54E900C6DFFD /* Location+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -247,6 +263,14 @@
 				3DDD43EE255D153F0052BFD7 /* Assets.xcassets */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		3DF35A0C255D55C400C6DFFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF35A0D255D55C400C6DFFD /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,9 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDD44C3255D44580052BFD7 /* DataBaseHelper.swift in Sources */,
 				3DDD443D255D22470052BFD7 /* StateCityTableViewCell.swift in Sources */,
 				3DDD4451255D31A30052BFD7 /* DataBase.xcdatamodeld in Sources */,
 				3DDD4419255D16CC0052BFD7 /* NetworkManager.swift in Sources */,
+				3DF359C9255D54E900C6DFFD /* Location+CoreDataClass.swift in Sources */,
 				3DDD441E255D171D0052BFD7 /* NetworkResponse.swift in Sources */,
 				3DDD442D255D1CED0052BFD7 /* ProgressHUD.swift in Sources */,
 				3DDD43EA255D153D0052BFD7 /* ViewController.swift in Sources */,
@@ -390,8 +416,10 @@
 				3DDD444B255D2C0A0052BFD7 /* UIView+Extension.swift in Sources */,
 				3DDD4443255D25D20052BFD7 /* UITableViewCell+Extension.swift in Sources */,
 				3DDD4432255D1D9F0052BFD7 /* BaseViewController.swift in Sources */,
+				3DF359CA255D54E900C6DFFD /* Location+CoreDataProperties.swift in Sources */,
 				3DDD43E8255D153D0052BFD7 /* SceneDelegate.swift in Sources */,
 				3DDD4428255D19840052BFD7 /* Connectivity.swift in Sources */,
+				3DDD44B4255D427F0052BFD7 /* CoreDataManager.swift in Sources */,
 				3DDD4437255D1ED60052BFD7 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
